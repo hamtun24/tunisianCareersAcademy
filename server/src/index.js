@@ -33,9 +33,9 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 // Configure CORS for deployment
-const clientUrl = process.env.CLIENT_URL || 'https://afraid-quail-93.loca.lt';
+const clientUrl =  'https://afraid-quail-93.loca.lt';
 app.use(cors({
-  origin: [clientUrl, 'https://eduflow.onrender.com',"https://afraid-quail-93.loca.lt"],
+  origin: [clientUrl],
   credentials: true
 }));
 
