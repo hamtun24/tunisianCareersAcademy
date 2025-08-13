@@ -34,8 +34,10 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 // Configure CORS for deployment
 const clientUrl =  'https://tunisiancareersacademy.netlify.app';
-app.use(cors({
-  origin: [clientUrl],
+app.options('*', cors({
+  origin: (origin, callback) => {
+    callback(null, true);
+  },
   credentials: true
 }));
 
