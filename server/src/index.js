@@ -33,7 +33,7 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 // Configure CORS for deployment
-const clientUrl =  'https://afraid-quail-93.loca.lt';
+const clientUrl =  'https://tunisiancareersacademy.netlify.app';
 app.use(cors({
   origin: [clientUrl],
   credentials: true
